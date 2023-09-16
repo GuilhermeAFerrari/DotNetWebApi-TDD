@@ -107,7 +107,7 @@ namespace CloudCustomers.UnitTests.Systems.Services
             var endpoint = "https://example.com/users";
 
             var handlerMock = MockHttpMessageHandler<User>
-                .SetupBasicGetResourceList(expectedResponse, endpoint);
+                .SetupBasicGetResourceList(expectedResponse);
 
             var httpClient = new HttpClient(handlerMock.Object);
 
