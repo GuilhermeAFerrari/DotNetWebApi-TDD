@@ -104,10 +104,11 @@ namespace CloudCustomers.UnitTests.Systems.Services
             // Arrange
             var expectedResponse = UsersFixture.GetTestUsers();
 
-            var endpoint = "https://example.com";
+            var endpoint = "https://example.com/users";
 
             var handlerMock = MockHttpMessageHandler<User>
                 .SetupBasicGetResourceList(expectedResponse, endpoint);
+
             var httpClient = new HttpClient(handlerMock.Object);
 
             var config = Options.Create(

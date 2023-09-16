@@ -7,7 +7,7 @@ namespace CloudCustomers.UnitTests.Helpers
 {
     internal static class MockHttpMessageHandler<T>
     {
-        internal static Mock<HttpMessageHandler> SetupBasicGetResourceList(List<T>  expectedResponse)
+        internal static Mock<HttpMessageHandler> SetupBasicGetResourceList(List<T> expectedResponse)
         {
             var mockResponse = new HttpResponseMessage(HttpStatusCode.OK)
             {
